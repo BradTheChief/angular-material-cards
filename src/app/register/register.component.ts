@@ -14,7 +14,6 @@ export class RegisterComponent {
 
   userModel = new User('', '', '', '',  '');
 
-  constructor(private _registerService: RegisterService) { }
 
 onSubmit(){
   
