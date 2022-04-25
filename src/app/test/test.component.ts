@@ -6,6 +6,4 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.css'],
 })
-export class TestComponent {
-  constructor(private myForm: MyForm) { }
-}
+export class TestComponent {}

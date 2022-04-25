@@ -7,12 +7,13 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
+import { TestComponent } from './test/test.component';
 
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
-  declarations: [ AppComponent, HelloComponent, RegisterComponent, UserComponent, TestComponent],
+  declarations: [ AppComponent, RegisterComponent, UserComponent, TestComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
