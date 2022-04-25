@@ -6,7 +6,7 @@
   <div class="form-group">
     <input
       type="firstName"
-      required
+      required maxLength="50"
       #firstName="ngModel"
       [class.is-invalid]="firstName.invalid && firstName.touched"
       class="form-control is-invalid"
@@ -20,6 +20,7 @@
   <div class="form-group">
     <input
       type="middleInitial"
+      maxlength="1"
       #middleInitial="ngModel"
       class="form-control"
       id="middle-initial"
@@ -31,7 +32,7 @@
   <div class="form-group">
     <input
       type="lastName"
-      required
+      required maxlength="50"
       #lastName="ngModel"
       [class.is-invalid]="lastName.invalid && lastName.touched"
       class="form-control"
@@ -44,6 +45,7 @@
   <div class="form-group">
     <input
       type="email"
+      maxlength="255"
       class="form-control"
       id="user-email"
       placeholder="Email"
@@ -54,6 +56,7 @@
   <div class="form-group">
     <input
       type="phone"
+      maxlength="255"
       #phone="ngModel"
       pattern="^\d{10}$"
       [class.is-invalid]="phone.invalid && phone.touched"

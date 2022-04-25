@@ -10,6 +10,11 @@ import { User } from '../user/user'
 })
 
 export class TestComponent {
+
+  formData = [];
+  title = "UserForm";
+
+
   userModel = new User('', '', '', '',  '');
 
 onSubmit(){
