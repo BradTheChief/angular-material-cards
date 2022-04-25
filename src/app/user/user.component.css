@@ -1,0 +1,14 @@
+th {
+  display: inline;
+  border: 1px solid rgb(190, 190, 190);
+  padding-left: 10px;
+  padding-right: 10px;
+  
+
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  letter-spacing: 1px;
+  font-family: sans-serif;
+}

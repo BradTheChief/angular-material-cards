@@ -1,67 +1,93 @@
-<form (ngSubmit)="onSubmit()">
-  <body>
-    <h5>Registration Form</h5>
-    
-    <main class="form-registration">
-      <div class="registration-firstName">
-        <input
-          type="firstName"
-          class="form-control"
-          id="first-name"
-          placeholder="First Name"
-        />
-      </div>
-      <div class="registration-middleInitial">
-        <input
-          type="middleInitial"
-          class="form-control"
-          id="middle-initial"
-          placeholder="Middle Initial"
-        />
-      </div>
-      <div class="registration-lastName">
-        <input
-          type="lastName"
-          class="form-control"
-          id="last-name"
-          placeholder="Last Name"
-        />
-      </div>
-      <div class="registration-email">
-        <input
-          type="email"
-          class="form-control"
-          id="user-email"
-          placeholder="Email"
-        />
-      </div>
-      <div class="registration-phone">
-        <input
-          type="phone"
-          class="form-control"
-          id="user-phone"
-          placeholder="Phone"
-        />
-      </div>
+<div class="container-fluid">
+<h5>Registration Form</h5>
+<form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="form-group">
+    <input
+      type="firstName"
+      required
+      maxLength="50"
+      #firstName="ngModel"
+      [class.is-invalid]="firstName.invalid && firstName.touched"
+      class="form-control is-invalid"
+      id="first-name"
+      placeholder="First Name"
+      name="firstName"
+      [(ngModel)]="userModel.firstName"
+    />
+    <small
+      class="text-danger"
+      [class.d-none]="firstName.valid || firstName.untouched"
+      >First name is required</small
+    >
+  </div>
+  <div class="form-group">
+    <input
+      type="middleInitial"
+      maxlength="1"
+      #middleInitial="ngModel"
+      class="form-control"
+      id="middle-initial"
+      placeholder="Middle Initial"
+      name="middleInitial"
+      [(ngModel)]="userModel.middleInitial"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      type="lastName"
+      required
+      maxlength="50"
+      #lastName="ngModel"
+      [class.is-invalid]="lastName.invalid && lastName.touched"
+      class="form-control"
+      id="last-name"
+      placeholder="Last Name"
+      name="lastName"
+      [(ngModel)]="userModel.lastName"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      type="email"
+      maxlength="255"
+      class="form-control"
+      id="user-email"
+      placeholder="Email"
+      name="email"
+      [(ngModel)]="userModel.email"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      type="phone"
+      maxlength="255"
+      #phone="ngModel"
+      pattern="^\d{10}$"
+      [class.is-invalid]="phone.invalid && phone.touched"
+      class="form-control"
+      id="user-phone"
+      placeholder="Phone"
+      name="phone"
+      [(ngModel)]="userModel.phone"
+    />
+    <div *ngIf="phone.errors && (phone.invalid || phone.touched)">
+      <small class="text-danger" *ngIf="phone.errors.pattern"
+        >Phone number must be 10 digits</small
+      >
+    </div>
+  </div>
 
-      <div class="submit-btn">
-        <button
-          id="btn-submit"
-          class="w-10 btn btn-lg btn-primary"
-          type="submit"
-        >
-          Submit
-        </button>
-      </div>
-      <div class="cancel-btn">
-        <button
-          id="btn-cancel"
-          class="w-10 btn btn-lg btn-secondary"
-          type="cancel"
-        >
-          Cancel
-        </button>
-      </div>
-    </main>
-    </body>
+  <button
+    id="btn-submit"
+    [disabled]="userForm.form.invalid"
+    class="w-10 btn btn-lg btn-primary"
+    type="submit"
+  >
+    Submit
+  </button>
+
+  <button id="btn-cancel" class="w-10 btn btn-lg btn-secondary" type="reset">
+    Cancel
+  </button>
 </form>
+</div>
