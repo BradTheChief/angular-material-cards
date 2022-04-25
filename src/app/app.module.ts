@@ -12,9 +12,10 @@ import { TestComponent } from './test/test.component';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule, UserComponent],
   declarations: [ AppComponent, RegisterComponent, UserComponent, TestComponent],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  exports:       [UserComponent]
 })
 export class AppModule { }
 

@@ -8,4 +8,6 @@ import { Test } from './test';
   styleUrls: ['./test.component.css'],
 })
 
-export class TestComponent { }
+export class TestComponent {
+ 
+ }

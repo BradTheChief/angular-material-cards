@@ -1,11 +1,17 @@
+<div class="container-fluid">
 <h5>Registration Form</h5>
-<form>
+<form #userForm="ngForm">
+
+{{userForm.value | json}}
+
   <div class="form-group">
     <input
       type="firstName"
       class="form-control"
       id="first-name"
       placeholder="First Name"
+      name="firstName"
+      ngModel
     />
   </div>
   <div class="form-group">
@@ -14,6 +20,8 @@
       class="form-control"
       id="middle-initial"
       placeholder="Middle Initial"
+      name="middleInitial"
+      ngModel
     />
   </div>
   <div class="form-group">
@@ -22,6 +30,8 @@
       class="form-control"
       id="last-name"
       placeholder="Last Name"
+      name="lastName"
+      ngModel
     />
   </div>
   <div class="form-group">
@@ -30,6 +40,8 @@
       class="form-control"
       id="user-email"
       placeholder="Email"
+      name="email"
+      ngModel
     />
   </div>
   <div class="form-group">
@@ -38,6 +50,8 @@
       class="form-control"
       id="user-phone"
       placeholder="Phone"
+      name="phone"
+      ngModel
     />
   </div>
 
