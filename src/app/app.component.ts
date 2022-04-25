@@ -10,7 +10,7 @@ import { TestComponent } from './test/test.component';
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
 
-  userModel = new User('Brad', 'J', 'Barletta', 'cuse0314@gmail.com',  '5702990690');
+  
 
 }
 

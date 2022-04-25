@@ -5,4 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css'],
 })
-export class UserComponent {}
+export class UserComponent {
+  
+}

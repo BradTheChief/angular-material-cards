@@ -3,6 +3,8 @@
 <form #userForm="ngForm">
 
 {{userForm.value | json}}
+<hr />
+{{userModel | json}}
 
   <div class="form-group">
     <input
@@ -11,7 +13,7 @@
       id="first-name"
       placeholder="First Name"
       name="firstName"
-      ngModel
+      [(ngModel)]="userModel.firstName"
     />
   </div>
   <div class="form-group">
@@ -21,7 +23,7 @@
       id="middle-initial"
       placeholder="Middle Initial"
       name="middleInitial"
-      ngModel
+      [(ngModel)]="userModel.middleInitial"
     />
   </div>
   <div class="form-group">
@@ -31,7 +33,7 @@
       id="last-name"
       placeholder="Last Name"
       name="lastName"
-      ngModel
+      [(ngModel)]="userModel.lastName"
     />
   </div>
   <div class="form-group">
@@ -41,7 +43,7 @@
       id="user-email"
       placeholder="Email"
       name="email"
-      ngModel
+      [(ngModel)]="userModel.email"
     />
   </div>
   <div class="form-group">
@@ -51,7 +53,7 @@
       id="user-phone"
       placeholder="Phone"
       name="phone"
-      ngModel
+      [(ngModel)]="userModel.phone"
     />
   </div>
 

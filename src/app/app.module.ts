@@ -8,14 +8,15 @@ import { HelloComponent } from './hello.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
 import { TestComponent } from './test/test.component';
+import { User } from './user/user';
 
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule, UserComponent],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
   declarations: [ AppComponent, RegisterComponent, UserComponent, TestComponent],
-  bootstrap:    [ AppComponent ],
-  exports:       [UserComponent]
+  bootstrap:    [ AppComponent ]
+  
 })
 export class AppModule { }
 
