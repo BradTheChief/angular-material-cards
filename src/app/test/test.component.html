@@ -1,0 +1,67 @@
+<form #usersubmit = "ngForm" (ngSubmit)="onSubmit()">
+<body>
+  <h5>Registration Form</h5>
+
+  <main class="form-registration">
+    <div class="registration-firstName">
+      <input
+        type="firstName"
+        class="form-control"
+        id="first-name"
+        placeholder="First Name"
+      />
+    </div>
+    <div class="registration-middleInitial">
+      <input
+        type="middleInitial"
+        class="form-control"
+        id="middle-initial"
+        placeholder="Middle Initial"
+      />
+    </div>
+    <div class="registration-lastName">
+      <input
+        type="lastName"
+        class="form-control"
+        id="last-name"
+        placeholder="Last Name"
+      />
+    </div>
+    <div class="registration-email">
+      <input
+        type="email"
+        class="form-control"
+        id="user-email"
+        placeholder="Email"
+      />
+    </div>
+    <div class="registration-phone">
+      <input
+        type="phone"
+        class="form-control"
+        id="user-phone"
+        placeholder="Phone"
+      />
+    </div>
+
+    <div class="submit-btn">
+      <button
+        id="btn-submit"
+        class="w-10 btn btn-lg btn-primary"
+        type="submit"
+      >
+        Submit
+      </button>
+    </div>
+    <div class="cancel-btn">
+      <button
+        id="btn-cancel"
+        class="w-10 btn btn-lg btn-secondary"
+        type="cancel"
+      >
+        Cancel
+      </button>
+    </div>
+  </main>
+</body>
+</form>
