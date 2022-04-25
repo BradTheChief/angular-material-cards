@@ -10,5 +10,10 @@ import { User } from '../user/user'
 })
 
 export class TestComponent {
-  userModel = new User('Brad', 'J', 'Barletta', 'cuse0314@gmail.com',  '5702990690');
+  userModel = new User('', '', '', '',  '');
+
+onSubmit(){
+  console.log(this.userModel);
+}
+
  }
