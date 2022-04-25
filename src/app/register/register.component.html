@@ -45,6 +45,11 @@
       name="lastName"
       [(ngModel)]="userModel.lastName"
     />
+    <small
+      class="text-danger"
+      [class.d-none]="lastName.valid || lastName.untouched"
+      >Last name is required</small
+    >
   </div>
   <div class="form-group">
     <input
