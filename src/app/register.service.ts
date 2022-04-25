@@ -8,10 +8,13 @@ import { User } from './user/user';
 
 export class RegisterService {
 
-  _url = '';
-  constructor(private _http: HttpClient) { }
+  url = '';
+  constructor(private http: HttpClient) { }
+  user() {
+    return this.http.get(this.url);
+  }
 
-  enroll(user: User) {
-    return this._http.post<any>(this._url, user);
+  saveUser(data: any) {
+    return this.http.post<any>(this.url, data);
   }
 }

@@ -17,12 +17,7 @@ export class RegisterComponent {
   constructor(private _registerService: RegisterService) { }
 
 onSubmit(){
-  this.submitted = true;
-    this._registerService.enroll(this.userModel)
-      .subscribe(
-        data => console.log('Success', data),
-        error => console.error('Error', error))
-    
+  
   }
   
   

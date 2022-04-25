@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { User } from '../user/user'
+import { RegisterService } from '../register.service';
+
 
 @Component({
   selector: 'app-test',
@@ -10,16 +11,22 @@ import { User } from '../user/user'
 
 export class TestComponent {
 
-  userModel = new User('', '', '', '',  '');
-
-onSubmit(){
-  console.log(this.userModel);
-  if (this.userModel){
-    console.log("Form Submitted");
-    
+  users: any;
+  constructor(private userData: RegisterService) {
+    this.userData.user().subscribe((data) => {
+      this.users = data;
+    });
   }
+
+  getUserFormData(data: any){
+    console.warn(data)
+    this.userData.saveUser(data).subscribe((data) => {
+      console.warn()
+    })
+  }
+
+
   
   
  }
  
-}
