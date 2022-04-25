@@ -1,6 +1,6 @@
 <div class="container-fluid">
 <h5>Registration Form</h5>
-<form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+<form #userForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
   <div class="form-group">
     <input
       type="firstName"

@@ -10,12 +10,14 @@ import { RegisterService } from '../register.service';
 })
 
 export class RegisterComponent {
+  submitted = false;
 
   userModel = new User('', '', '', '',  '');
 
   constructor(private _registerService: RegisterService) { }
 
 onSubmit(){
+  this.submitted = true;
     this._registerService.enroll(this.userModel)
       .subscribe(
         data => console.log('Success', data),
@@ -26,4 +28,3 @@ onSubmit(){
   
  }
  
-}
