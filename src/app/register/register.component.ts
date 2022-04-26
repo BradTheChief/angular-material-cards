@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { User } from '../user/user';
-import { RegisterService } from '../register.service';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -22,11 +21,13 @@ export class RegisterComponent {
 
   constructor(private http: HttpClient) {}
 
+  
+
   onSubmit(data) {
     this.http
       .post('https://tgh-newhire-api.azurewebsites.net/api/User', data)
       .subscribe((result) => {
-        console.warn('result', result);
-      });
+        console.log("result", result);
+      })
   }
 }
