@@ -13,6 +13,9 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
 })
+
+
+
 export class RegisterComponent {
 
   json;
@@ -23,6 +26,8 @@ export class RegisterComponent {
 
   constructor(private http: HttpClient) {}
 
+ 
+
   
 
   onSubmit(data) {
@@ -32,4 +37,14 @@ export class RegisterComponent {
         console.log("result", result);
       })
   }
+}
+
+interface UserInfo {
+  UserID: number,
+  FirstName: string,
+  MiddleIntitial: string,
+  Email: string,
+  Phone: string,
+  AccessCode: string
+
 }
