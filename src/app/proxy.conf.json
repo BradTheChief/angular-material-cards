@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://tgh-newhire-api.azurewebsites.net/api/User",
+    "accessCode": 646979
+  }
+}
