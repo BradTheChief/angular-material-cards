@@ -14,8 +14,10 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent {
+
   json;
   submitted = false;
+  result;
 
   userModel = new User('', '', '', '', '');
 
