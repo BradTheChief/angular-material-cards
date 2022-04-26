@@ -11,10 +11,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RegisterComponent {
   constructor(private http: HttpClient) {}
-  
+
   submitted = false;
 
   userModel = new User('', '', '', '', '');
 
-  onSubmit() {}
+  onSubmit(data) {
+    this.http
+      .post('https://tgh-newhire-api.azurewebsites.net/api/User', data)
+      .subscribe((data) => {
+        console.warn('data', data);
+      });
+  }
 }
